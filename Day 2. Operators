@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution {
+
+    static void Main(String[] args) {
+        //string s = Console.ReadLine();
+        double n = Convert.ToDouble(Console.ReadLine());
+        int p = Convert.ToInt32(Console.ReadLine());
+        int t = Convert.ToInt32(Console.ReadLine());
+        
+        double tip = n * p/100;
+        double tax = n * t/100;                            
+        double result = tip + tax + n;                        
+        Console.Write("The total meal cost is {0} dollars.", Math.Round(result));
+    }
+}
