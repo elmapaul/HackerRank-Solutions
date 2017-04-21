@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Solution {
+    static void Main(String[] args) {
+
+        int n = Convert.ToInt32(Console.ReadLine());
+        int sum = 1;
+        Console.WriteLine(factorial(n));
+    }
+     
+      public static long factorial(int i){
+            if (i == 0) return 1;
+            return i * factorial(i - 1);
+        }    
+}
