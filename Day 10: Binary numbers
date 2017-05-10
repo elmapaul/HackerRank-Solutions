@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution {
+
+    static void Main(String[] args) {
+        int n = Convert.ToInt32(Console.ReadLine());
+        int t = 0;
+        int remainder = 0;
+        string s = "";
+        int max = 0;
+        
+        while (n > 0)
+        {            
+            remainder = n % 2;
+            if (remainder == 1){
+                t += 1;
+                if (max < t) max = t;
+            }
+            else t = 0;
+            
+            n = n/2;
+            s += remainder.ToString();
+        }
+        
+        Console.WriteLine(max.ToString());
+    }
+}
