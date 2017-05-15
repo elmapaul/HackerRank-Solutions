@@ -1,0 +1,19 @@
+	// Add your code here
+    public Difference(int[] el) 
+    {
+        this.elements = el;
+        //maximumDifference = 0;
+    }
+
+    public void computeDifference()
+    {
+        for (int v = 0; v < elements.Length; v++)
+        {
+            for (int v2 = 0; v2 < elements.Length; v2++) 
+            {
+                int dif = Math.Abs(elements[v] - elements[v2]);
+                if (maximumDifference < dif) maximumDifference = dif;    
+            }
+        }
+    }
+    
