@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+class Solution {
+
+    static void Main(String[] args) {
+        string S = Console.ReadLine();
+        int n = 0;
+        
+        try{
+             //n = S.ToString();
+            n = Convert.ToInt32(S);
+             Console.WriteLine(n);
+            
+        }
+        catch(Exception e){
+            Console.WriteLine("Bad String");
+        }
+    }
+}
