@@ -1,0 +1,26 @@
+class Calculator{
+            public int power(int p, int n){
+                int sum = 0;
+                
+                if((n < 0) || (p < 0)) {
+                    throw new ArgumentException("n and p should be non-negative");
+                }
+                
+                else if ((n == 0) || (p == 0)) {
+                    if (n == 0) return sum+1;
+                    else return sum;
+                }
+                else{
+                    sum=p;
+                    for (int a = 0; a < n-1; a++)
+                    {
+                        sum*=p;
+                    }
+                    
+                    return sum;
+                }
+                
+                
+            }
+              
+    }
