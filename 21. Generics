@@ -1,0 +1,6 @@
+	static void PrintArray<T>(T[] array) {
+        
+		foreach (T o in array)   Console.WriteLine(o);
+        
+  }
+        
