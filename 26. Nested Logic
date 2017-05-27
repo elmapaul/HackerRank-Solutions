@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class Solution
+{
+    static void Main(String[] args)
+    {
+        var a = Console.ReadLine().Split(' ');
+        var da = int.Parse(a[0]);
+        var ma = int.Parse(a[1]);
+        var ya = int.Parse(a[2]);
+
+        var ex = Console.ReadLine().Split(' ');
+        var de = int.Parse(ex[0]);
+        var me = int.Parse(ex[1]);
+        var ye = int.Parse(ex[2]);
+
+        int fine = 0;
+
+        if (ya > ye) fine = 10000;
+        else if (ya == ye)
+        {
+            
+            if (ma > me) fine = (ma - me) * 500;
+            else if (ma == me && da > de) fine = (da - de) * 15;
+        }
+
+        Console.WriteLine(fine);
+    }
+
+}
